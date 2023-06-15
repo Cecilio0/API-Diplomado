@@ -29,7 +29,7 @@ const loginUsuario = async(user:User) => {
     if(!isMatch){
         return "Usuario o password incorrectos";
     }
-    const token = await signToken(user.name);
+    const token = await signToken(user.name, user.rol);
     const data = {
         token: token,
         user: {
