@@ -9,7 +9,7 @@ const signToken=async(id:string, rol:string)=>{
 }
 
 const VerifyToken=(jwt:string)=>{
-    const isOk= verify(jwt,JWT_SECRET);
+    const isOk= verify(jwt, JWT_SECRET) as JwtPayload;
     return isOk;
     
 }

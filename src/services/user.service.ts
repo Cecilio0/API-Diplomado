@@ -27,7 +27,7 @@ const loginUsuario = async(user:User) => {
     const passwordHash = userExist.password;
     const isMatch = await verify(user.password, passwordHash);
     if(!isMatch){
-        return "Usuario o password incorrectos";
+        return "Usuario o contraseña incorrectos";
     }
     const token = await signToken(user.name, user.rol);
     const data = {

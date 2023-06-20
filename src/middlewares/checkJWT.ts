@@ -12,7 +12,6 @@ const checkJWT = (req:Request, res:Response, next:NextFunction) => {
         console.log(isOk);
         
         if(isOk){
-            const rol = obtenerRol(jwt)
             next();
             return;
         } else {
