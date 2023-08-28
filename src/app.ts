@@ -20,9 +20,9 @@ app.use(router);
 const specs = swaggerJSDoc(options);
 app.use("/docs", swaggerUI.serve, swaggerUI.setup(specs))
 
-dbConnect().then(() => console.log("conexion exitosa")); 
+dbConnect().then(() => console.log("Succesful connection")); 
 
 
 app.listen(PORT, () => {
-    
+    console.log("Listening on PORT: " + PORT)
 });

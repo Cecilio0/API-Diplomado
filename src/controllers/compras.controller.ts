@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { getCompras, getComprasCarro, getComprasUsuario, insertarCompra } from "../services/compra.service";
 import { VerifyToken } from "../utils/jwt.handle";
-import { JwtPayload } from "jsonwebtoken";
 
 
 const hacerCompra = async(req:Request, res:Response) => {
@@ -22,7 +21,6 @@ const hacerCompra = async(req:Request, res:Response) => {
         res.status(201).send(response)
     }catch(e){
         console.log(e);
-        
     }
 }
 
